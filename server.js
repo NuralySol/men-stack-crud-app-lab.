@@ -22,12 +22,9 @@ app.set('view engine', 'ejs');
 app.use('/cars', carsRouter);
 
 // Connect to MongoDB
-mongoose.connect('mongodb://localhost:27017/carDb', {
-    useNewUrlParser: true,
-    useUnifiedTopology: true,
-})
-.then(() => console.log('Connected to MongoDB'))
-.catch((err) => console.error('Connection error', err));
+mongoose.connect('mongodb://localhost:27017/carDb')
+    .then(() => console.log('Connected to MongoDB'))
+    .catch((err) => console.error('Connection error', err));
 
 // Start the server on port 3000
 const port = 3000;

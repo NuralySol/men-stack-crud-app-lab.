@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit <%= car.name %></title>
+</head>
+<body>
+    <h1>Edit <%= car.name %></h1>
+    <form action="/cars/<%= car._id %>?_method=PUT" method="POST">
+        <label for="name">Car Name:</label>
+        <input type="text" id="name" name="name" value="<%= car.name %>" required>
+        <br>
+        <label for="description">Description:</label>
+        <textarea id="description" name="description" required><%= car.description %></textarea>
+        <br>
+        <label for="image">Image URL:</label>
+        <input type="text" id="image" name="image" value="<%= car.image %>">
+        <br>
+        <button type="submit">Update Car</button>
+    </form>
+    <a href="/cars">Back to Cars List</a>
+</body>
+</html>
