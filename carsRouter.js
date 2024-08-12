@@ -7,7 +7,7 @@ const router = express.Router();
 router.get('/', async (req, res) => {
     try {
         const cars = await Car.find();
-        res.render('cars/index', { cars }); // Assuming you're using EJS as the template engine
+        res.render('cars/index', { cars }); 
     } catch (err) {
         res.status(500).send(err.message);
     }
@@ -15,7 +15,7 @@ router.get('/', async (req, res) => {
 
 // Shows a form to create a new car
 router.get('/new', (req, res) => {
-    res.render('cars/new'); // Render form to create a new car
+    res.render('cars/new'); 
 });
 
 // Creates a new car
