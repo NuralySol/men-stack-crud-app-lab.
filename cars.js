@@ -1,5 +1,5 @@
 import express from 'express';
-import Car from './cars.js'; // Corrected import path
+import Car from './models/cars.js';
 
 const router = express.Router();
 

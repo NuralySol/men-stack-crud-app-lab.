@@ -3,7 +3,7 @@ import mongoose from 'mongoose';
 import methodOverride from 'method-override';
 import path from 'path';
 import { fileURLToPath } from 'url';
-import carsRouter from './cars.js'; // Import your cars routes
+import carsRouter from './models/cars.js'; // Import your cars routes
 
 // Initialize Express application
 const app = express();
