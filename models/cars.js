@@ -1,10 +1,10 @@
-const mongoose = require('mongoose')
+const mongoose = require('mongoose');
 
-const Cars = new mongoose.Schema({
+const carSchema = new mongoose.Schema({
     name: { type: String, required: true },
     description: { type: String, required: true },
     image: String,
-})
+});
 
-const Cars = mongoose.model('Cars', Cars)
-module.exports = Cars
+const Car = mongoose.model('Car', carSchema);
+module.exports = Car;
